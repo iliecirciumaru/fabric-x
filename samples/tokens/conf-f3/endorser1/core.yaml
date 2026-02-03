@@ -1,6 +1,6 @@
 logging:
   spec: info
-  format: '%{color}%{time:15:04:05.000} [%{module}] %{shortfunc} %{level:.4s}%{color:reset} %{message}'
+  format: "%{color}%{time:15:04:05.000} [%{module}] %{shortfunc} %{level:.4s}%{color:reset} %{message}"
 
 fsc:
   id: endorser1 # CORE_FSC_ID
@@ -56,12 +56,7 @@ fsc:
 fabric:
   enabled: true
   default:
-    # mspConfigPath: ./keys/fabric/user
     msps:
-      - id: user
-        mspType: bccsp
-        mspID: Org1MSP
-        path: ./keys/fabric/user
       - id: endorser
         mspType: bccsp
         mspID: Org1MSP

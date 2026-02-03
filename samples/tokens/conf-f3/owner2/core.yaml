@@ -1,6 +1,6 @@
 logging:
   spec: info
-  format: '%{color}%{time:15:04:05.000} [%{module}] %{shortfunc} %{level:.4s}%{color:reset} %{message}'
+  format: "%{color}%{time:15:04:05.000} [%{module}] %{shortfunc} %{level:.4s}%{color:reset} %{message}"
 
 fsc:
   id: owner2 # CORE_FSC_ID
@@ -56,7 +56,6 @@ fsc:
 fabric:
   enabled: true
   default:
-    mspConfigPath: ./keys/fabric/user
     defaultMSP: user
     msps:
       - id: user

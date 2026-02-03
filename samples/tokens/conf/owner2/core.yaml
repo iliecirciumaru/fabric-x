@@ -1,6 +1,6 @@
 logging:
   spec: info
-  format: '%{color}%{time:15:04:05.000} [%{module}] %{shortfunc} %{level:.4s}%{color:reset} %{message}'
+  format: "%{color}%{time:15:04:05.000} [%{module}] %{shortfunc} %{level:.4s}%{color:reset} %{message}"
 
 fsc:
   id: owner2 # CORE_FSC_ID
@@ -12,6 +12,9 @@ fsc:
   p2p:
     listenAddress: /ip4/0.0.0.0/tcp/9601 # CORE_P2P_LISTENADDRESS
     type: websocket
+    opts:
+      routing:
+        path: ./routing-config.yaml
   persistences:
     default:
       type: sqlite
@@ -63,10 +66,10 @@ fabric:
     tls:
       enabled: false
     peers:
-      - address: committer-sidecar:5400
+      - address: committer-sidecar:4001
         usage: delivery
     queryService:
-      - address: committer-queryservice:5500
+      - address: committer-queryservice:7001
     channels:
       - name: arma
         default: true
@@ -96,5 +99,3 @@ token:
               endorsers:
                 - endorser1
                 # - endorser2
-      publicParameters:
-        path: ../namespace/zkatdlognoghv1_pp.json

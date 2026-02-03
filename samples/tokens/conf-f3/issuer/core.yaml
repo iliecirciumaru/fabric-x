@@ -1,6 +1,6 @@
 logging:
   spec: info
-  format: '%{color}%{time:15:04:05.000} [%{module}] %{shortfunc} %{level:.4s}%{color:reset} %{message}'
+  format: "%{color}%{time:15:04:05.000} [%{module}] %{shortfunc} %{level:.4s}%{color:reset} %{message}"
 
 fsc:
   id: issuer # CORE_FSC_ID
@@ -56,8 +56,6 @@ fsc:
 fabric:
   enabled: true
   default:
-    # mspConfigPath: ./keys/fabric/user
-    defaultMSP: user
     msps:
       - id: user
         mspType: bccsp
@@ -81,7 +79,6 @@ token:
       namespace: token_namespace
       driver: zkatdlog
       wallets:
-        defaultCacheSize: 3
         issuers:
           - id: iss
             path: ./keys/wallet/iss
