@@ -35,7 +35,6 @@ clean-fabric:
 		rm -rf "$$d/keys/fabric" "$$d/data"; \
 	done
 
-
 # Start the targeted hosts (e.g. make fabric-fabric start).
 .PHONY: start-fabric
 start-fabric:
